@@ -37,12 +37,11 @@ export class AppComponent implements AfterViewInit {
         $('#bulb_orange').addClass('bulb-glow-orange');
         $('body').addClass('peach');
         $(this).fadeOut('slow').delay(5000).promise().done(function(){
-          $('#bannar_coming').fadeIn('slow');
+          $('#play').fadeIn('slow');
         });
       });
       $('#play').click(function(){
-        var audio = $('.song')[0];
-        audio.play();
+        $('#player')[0].play();
         $('#bulb_yellow').addClass('bulb-glow-yellow-after');
         $('#bulb_red').addClass('bulb-glow-red-after');
         $('#bulb_blue').addClass('bulb-glow-blue-after');
